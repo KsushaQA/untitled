@@ -66,7 +66,7 @@ public class HW1 {
         Thread.sleep(2000);
         driver.quit();*/
 
-        /* HW 5
+        /*HW 5
         driver.get("https://dan-it.com.ua/");
         Thread.sleep(2000);
         driver.findElement(By.xpath("//a[text()='Українська']")).click();
@@ -75,6 +75,18 @@ public class HW1 {
                 (By.xpath("//a[@class='page-header__phone']")).getText());
         Thread.sleep(2000);
         driver.quit();*/
+
+        /*HW 6
+        driver.get("https://dan-it.com.ua/");
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//a[text()='Українська']")).click();
+        Thread.sleep(2000);
+        System.out.println(driver.findElement
+                (By.xpath("//li[@class='banner-meta__item banner-meta__item--main banner-meta__item--main--offline']")).getText());
+        Thread.sleep(2000);
+        driver.quit();*/
+
+
 
 
     }
