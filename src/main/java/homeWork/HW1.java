@@ -66,6 +66,17 @@ public class HW1 {
         Thread.sleep(2000);
         driver.quit();*/
 
+        /* HW 5
+        driver.get("https://dan-it.com.ua/");
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//a[text()='Українська']")).click();
+        Thread.sleep(2000);
+        System.out.println(driver.findElement
+                (By.xpath("//a[@class='page-header__phone']")).getText());
+        Thread.sleep(2000);
+        driver.quit();*/
 
+
+    }
 }
-}
+
