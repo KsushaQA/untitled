@@ -39,8 +39,6 @@ public class HW1 {
         Thread.sleep(4000);
         driver.quit();*/
 
-
-
-
+        System.out.println();
 }
 }
