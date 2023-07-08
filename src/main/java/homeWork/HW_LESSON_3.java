@@ -1,14 +1,10 @@
 package homeWork;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.util.Set;
-
-public class HW1 {
+public class HW_LESSON_3 {
     public static void main(String[] args) throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\driver\\chromedriver.exe");
 
