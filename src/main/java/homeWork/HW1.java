@@ -1,8 +1,12 @@
 package homeWork;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import java.util.Set;
 
 public class HW1 {
     public static void main(String[] args) throws InterruptedException {
@@ -66,7 +70,7 @@ public class HW1 {
         Thread.sleep(2000);
         driver.quit();*/
 
-        /*HW 5
+        /*//HW 5
         driver.get("https://dan-it.com.ua/");
         Thread.sleep(2000);
         driver.findElement(By.xpath("//a[text()='Українська']")).click();
@@ -76,7 +80,7 @@ public class HW1 {
         Thread.sleep(2000);
         driver.quit();*/
 
-        /*HW 6
+       /* //HW 6
         driver.get("https://dan-it.com.ua/");
         Thread.sleep(2000);
         driver.findElement(By.xpath("//a[text()='Українська']")).click();
@@ -86,9 +90,51 @@ public class HW1 {
         Thread.sleep(2000);
         driver.quit();*/
 
+        /*//HW 7
+        driver.get("https://www.w3schools.com/");
+        WebElement element1 = driver.findElement(By.id("myLearningFromDefault"));
+        Thread.sleep(2000);
+        element1.click();
+        WebElement element2 = driver.findElement(By.id("search2"));
+        Thread.sleep(2000);
+        element2.sendKeys("Hello");
+        WebElement element3 = driver.findElement(By.id("search2"));
+        Thread.sleep(2000);
+        element3.clear();
+        driver.findElement(By.xpath("//a[@title='Search W3Schools']")).click();
+        driver.findElement(By.id("gsc-i-id1")).sendKeys("Text");
+        Thread.sleep(4000);
+        WebElement element4 = driver.findElement(By.id("navbtn_exercises"));
+        Thread.sleep(2000);
+        element4.click();
+        WebElement element5 = driver.findElement(By.id("proFromDefault"));
+        Thread.sleep(2000);
+        element5.click();
+        driver.quit();*/
 
+        /*//HW 8
+        driver.get("https://dan-it.com.ua/");
+        driver.findElement(By.xpath("//a[text()='Українська']")).click();
+        Thread.sleep(2000);
+        WebElement itCenterElement = driver.findElement
+                (By.xpath("//p[contains(text(), 'центр з підготовки')]"));
+        System.out.println(driver.findElement
+                (By.xpath("//li[@class='main-expertise__point'][3]/b")).getText());
+        driver.quit();*/
 
+        //HW 9
+        /*driver.get("https://www.jetbrains.com/idea/");
+        driver.findElement(By.xpath("//a[@class='wt-col-inline menu-second__download-button wt-button wt-button_size_s wt-button_mode_primary']")).click();
+        Thread.sleep(2000);
+        driver.quit();*/
 
+        //HW 10
+        /*driver.get("https://www.jetbrains.com/idea/download/?section=windows#section=windows");
+        System.out.println(driver.findElement(By.xpath("//span[@class='_wtDownloadButton_y7414']/a")).getText());
+        System.out.println(driver.findElement(By.xpath("//div[@class='wt-col-inline jb-text-center']/span/a")).getText());
+        System.out.println();
+        Thread.sleep(2000);
+        driver.quit();*/
     }
 }
 
