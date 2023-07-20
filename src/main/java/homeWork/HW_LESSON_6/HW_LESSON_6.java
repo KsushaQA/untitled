@@ -91,6 +91,10 @@ public class HW_LESSON_6 {
         newDescriptor2 = windowHandles4.iterator().next();
         driver.switchTo().window(newDescriptor2);
         driver.get("https://www.hyrtutorials.com/p/alertsdemo.html");
+        driver.manage().deleteAllCookies();
+        Actions actions = new Actions(driver);
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
+        Thread.sleep(4000);
         driver.findElement(By.id("alertBox")).click();
         WebDriverWait wait1 = new WebDriverWait (driver, Duration.ofSeconds(10));
         Alert alert1 = wait1.until(ExpectedConditions.alertIsPresent());
@@ -108,7 +112,6 @@ public class HW_LESSON_6 {
         alert3.sendKeys("Final step of this task");
         alert3.accept();
         System.out.println(driver.findElement(By.id("output")).getText());
-        //driver.quit();
-
+        driver.quit();
     }
 }
