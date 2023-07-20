@@ -4,8 +4,12 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
+import java.util.Iterator;
 import java.util.Set;
 
 
@@ -78,10 +82,33 @@ public class HW_LESSON_6 {
         driver.findElement(By.id("Password")).sendKeys("12345678");
         driver.findElement(By.id("ConfirmPassword")).sendKeys("12345679");
         driver.findElement(By.id("ConfirmPassword")).sendKeys("12345679");
-        //section[@class='form-section form-half']
         driver.findElement(By.xpath("//section[@class='form-section form-half']")).click();
         Thread.sleep(2000);
         System.out.println(driver.findElement
                 (By.xpath("//span[@data-valmsg-for='ConfirmPassword']")).getText());
+        windowHandles4 = driver.getWindowHandles();
+        windowHandles4.removeAll(windowHandles3);
+        newDescriptor2 = windowHandles4.iterator().next();
+        driver.switchTo().window(newDescriptor2);
+        driver.get("https://www.hyrtutorials.com/p/alertsdemo.html");
+        driver.findElement(By.id("alertBox")).click();
+        WebDriverWait wait1 = new WebDriverWait (driver, Duration.ofSeconds(10));
+        Alert alert1 = wait1.until(ExpectedConditions.alertIsPresent());
+        alert1.accept();
+        System.out.println(driver.findElement(By.id("output")).getText());
+        driver.findElement(By.id("confirmBox")).click();
+        WebDriverWait wait2 = new WebDriverWait (driver, Duration.ofSeconds(10));
+        Alert alert2 = wait2.until(ExpectedConditions.alertIsPresent());
+        alert2.dismiss();
+        System.out.println(driver.findElement(By.id("output")).getText());
+        driver.findElement(By.id("promptBox")).click();
+        WebDriverWait wait3 = new WebDriverWait (driver, Duration.ofSeconds(10));
+        Alert alert3 = wait3.until(ExpectedConditions.alertIsPresent());
+        alert3.sendKeys(String.valueOf(Keys.DELETE));
+        alert3.sendKeys("Final step of this task");
+        alert3.accept();
+        System.out.println(driver.findElement(By.id("output")).getText());
+        //driver.quit();
+
     }
 }

@@ -22,7 +22,6 @@ public class HW1_LESSON_5 {
         Select Box = new Select(driver.findElement(By.id("Carlist")));
         Box.selectByVisibleText("Renault");
         Actions actions = new Actions(driver);
-        //WebElement firstCountry = driver.findElement(By.xpath("//select/*[text()='Russia']"));
         WebElement firstCountry = driver.findElements(By.tagName("option")).get(9);
         actions.keyDown(Keys.CONTROL).click(firstCountry)
                 .click(driver.findElement(By.xpath("//select/*[text()='Germany']")))
