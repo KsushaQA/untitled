@@ -1,50 +1,42 @@
 package priority;
 
-import org.junit.jupiter.api.*;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import org.testng.annotations.Test;
 
-@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+import static org.testng.Assert.assertTrue;
 
 public class Priority1 {
 
-    @Test
-    @Order(7)
+    @Test(dependsOnMethods={"g"})
+    public void f() {
+        assertTrue(true);
+    }
+
+    @Test(dependsOnMethods={"f"})
+    public void e() {
+        assertTrue(true);
+    }
+
+    @Test(dependsOnMethods={"e"})
+    public void d() {
+        assertTrue(true);
+    }
+
+    @Test(dependsOnMethods={"d"})
+    public void c() {
+        assertTrue(true);
+    }
+
+    @Test(dependsOnMethods={"c"})
+    public void b() {
+        assertTrue(true);
+    }
+
+    @Test(dependsOnMethods={"b"})
     public void a() {
         assertTrue(true);
     }
 
     @Test
-    @Order(6)
-    public void b() {
-        assertTrue(true);
-    }
-
-    @Test
-    @Order(5)
-    public void c() {
-        assertTrue(true);
-    }
-
-    @Test
-    @Order(4)
-    public void d() {
-        assertTrue(true);
-    }
-
-    @Test
-    @Order(3)
-    public void e() {
-        assertTrue(true);
-    }
-
-    @Test
-    @Order(2)
-    public void f() {
-        assertTrue(true);
-    }
-
-    @Test
-    @Order(1)
     public void g() {
         assertTrue(true);
     }
