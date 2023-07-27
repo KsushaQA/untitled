@@ -1,8 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="AllTests Suite">
-    <test name="AllTestCases">
+<suite name="TestNG Grouping Suite">
+    <test name="First Group" preserve-order="true">
+        <groups>
+             <run>
+                  <include name = "first"/>
+             </run>
+            </groups>
         <classes>
             <class name="grouping.Groups"/>
         </classes>
     </test>
+
+    <test name="Second Group" preserve-order="true">
+    <groups>
+    <run>
+    <include name = "second"/>
+    </run>
+    </groups>
+    <classes>
+        <class name="grouping.Groups"/>
+    </classes>
+    </test>
+
 </suite>
