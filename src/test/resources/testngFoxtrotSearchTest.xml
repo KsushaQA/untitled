@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="FoxtrotSearch Test Suite">
+    <test name="Foxtrot Search Test">
+        <classes>
+            <class name="foxtrot.FoxtrotSearchTest" />
+        </classes>
+    </test>
+</suite>
