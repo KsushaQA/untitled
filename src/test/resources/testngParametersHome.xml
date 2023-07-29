@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Foxtrot Search Test Suite">
+    <test name="Foxtrot Search Test">
+        <parameter name="searchWords" value="машина, input, смысл" />
+        <classes>
+            <class name="foxtrot.FoxtrotSearchTest2" />
+        </classes>
+    </test>
+</suite>
